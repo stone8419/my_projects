@@ -2,7 +2,7 @@
  * @Description： 函数的重载
  * @Author: stone
  * @Date: 2020-02-01 06:30:19
- * @LastEditTime : 2020-02-01 08:27:33
+ * @LastEditTime : 2020-02-01 22:08:59
  * @LastEditors  : stone
  */
 #include "test.h"
@@ -55,6 +55,7 @@ int sameNameFunc(double age)
 {
     return age;
 }
+
 /**
  * @description: 
  * @param : 
@@ -68,6 +69,42 @@ void reloadOfReference(int& arg) //如下调用传入实参如果为10，语义�
 void reloadOfReference(const int& arg) //如下调用传入实参如果为10，语义是const int& arg = 10，该表达式为常量引用，编译器会创建临时栈区空间
 {
     cout << "called void reloadOfReference(const int& arg)" << endl;
+    return;
+}
+
+/**
+ * @description: 这里的重载是可以和上面两个重载同时存在的(符合入参的类型不同)，但是需要注意避免调用时存在的二义性
+ * 情况1：调用如果为reloadOfRefrence(a);则(int& arg)和(int arg)同时都能编译，造成二义性
+ * 情况2：调用如果为reloadOfRefrence(10);则(const int& arg)和(int arg)同时都能编译，造成二义性
+ * @param : 
+ * @return: 
+ */
+/* void reloadOfReference(int arg)
+{
+    cout << "called void reloadOfReference(int arg)" << endl;
+    return;
+} */
+
+/**
+ * @description: 函数的重载遇到函数的默认参数
+ * @param : 
+ * @return: 
+ */
+void displayDemo(int a, int b = 10)
+{
+    cout << "a = " << a << " b = " << b << endl;
+    return;
+}
+void displayDemo(int a)
+{
+    cout << "a = " << a << endl;
+    return;
+}
+void reloadMeetDefaultArgs()
+{
+    // 如果出现(int a, int b = 10)和(int a)两种重载可以同时存在时，所以在调用时需要注意避免二义性
+    // displayDemo(10);    //这样调用会造成编译器不知道走上面两个接口中的哪个，造成二义性
+    displayDemo(10, 2);
     return;
 }
 /**
@@ -97,5 +134,7 @@ void test16()
     reloadOfReference(10); //调用void reloadOfReference(const int &arg)，根据语境，该处传入的是一个只读保护的入参(常量输入只读保护)
     int arg = 10;
     reloadOfReference(arg); //该处调用的是void reloadOfReference(int &arg)，根据语境，该处传入的是一个普通变量int arg = 10；
+
+    reloadMeetDefaultArgs();
     return;
 }

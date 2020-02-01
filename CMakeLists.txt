@@ -13,7 +13,8 @@ else()
     message(STATUS "Not support other platform")
 endif()
 message(${HOME_NAME})
-add_definitions(-fstack-protector-all -fPIC -D_FORTIFY_SOURCE=2 -O2 -Wmissing-declarations 
+# ------------cancel -Wmissing-declarations ---------
+add_definitions(-fstack-protector-all -fPIC -D_FORTIFY_SOURCE=2 -O2
     -D_GNU_SOURCE -D__USE_XOPEN)
 set(CMAKE_PROJECT_TYPE "Debug")
 set(CMAKE_BUILD_TYPE "Debug")
