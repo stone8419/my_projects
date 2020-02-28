@@ -1,0 +1,22 @@
+{
+    "C_Cpp.clang_format_fallbackStyle": "WebKit",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "type_traits": "cpp"
+    },
+    "winopacity.opacity": 150, //vscode窗口透明度调整，linux子系统中不可用
+    /*********** git commit message helper config start ************/
+    "git-commit.autoselectEndOfSubject": true,
+    "git-commit.subjectFormat.enableFormatter": true,
+    "git-commit.subjectFormat.template": "[$0] $1",
+    "git-commit.subjectFormat.linterRegex": "^\\[((?:[A-Z]+-\\d+)(?:, [A-Z]+-\\d+)*)?\\] (.*)",
+    "git-commit.subjectFormat.branchRegex": "^\\w+\\/(CMS-\\d+)(?:-.*)",
+    "git-commit.subjectFormat.displayCharactersRemaining": true,
+    "git-commit.subjectFormat.charactersRemainingTextColor": "rgba(153, 153, 153, 0.35)",
+    "git-commit.subjectFormat.maxLength": 72
+    /*********** git commit message helper config done************/
+}

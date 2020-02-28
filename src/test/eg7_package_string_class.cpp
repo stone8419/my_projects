@@ -2,7 +2,7 @@
  * @Description: 字符串类得封装
  * @Author: stone
  * @Date: 2020-02-18 15:14:36
- * @LastEditTime: 2020-02-28 11:36:25
+ * @LastEditTime: 2020-02-28 12:59:35
  * @LastEditors: stone
  */
 #include "eg7_package_string_class.h"
