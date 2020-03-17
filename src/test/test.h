@@ -2,8 +2,8 @@
  * @Description: 
  * @Author: stone
  * @Date: 2020-01-19 19:21:43
- * @LastEditTime : 2020-02-12 11:30:25
- * @LastEditors  : stone
+ * @LastEditTime: 2020-03-05 12:15:44
+ * @LastEditors: stone
  */
 #ifndef _TEST_H
 #define _TEST_H
@@ -40,6 +40,10 @@ void test34();
 void test35();
 void test36();
 void test37();
+void test38();
+void test39();
+void test40();
+void test41();
 void testEg1();
 void testEg2();
 void testEg3();
