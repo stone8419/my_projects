@@ -1,9 +1,11 @@
-/*
- * @Description: 字符串类的封装
+/*** 
  * @Author: stone
- * @Date: 2020-02-18 15:18:15
- * @LastEditTime: 2020-02-28 11:06:38
+ * @Date: 2020-04-04 22:29:02
+ * @LastEditTime: 2020-05-01 23:04:04
  * @LastEditors: stone
+ * @Description: 
+ * @FilePath: /server_frame/src/test/eg7_package_string_class.h
+ * @Copyright © 2000-2020 lldao9527@139.com All Rights Reserved.
  */
 #ifndef _EG7_PACKAGE_STRING_CLASS_H
 #define _EG7_PACKAGE_STRING_CLASS_H

@@ -1,10 +1,4 @@
-/*
- * @Description: 继承中的同名成员处理
- * @Author: stone
- * @Date: 2020-03-13 22:51:25
- * @LastEditTime: 2020-03-13 23:15:14
- * @LastEditors: stone
- */
+
 #include <iostream>
 #include <string>
 using namespace std;

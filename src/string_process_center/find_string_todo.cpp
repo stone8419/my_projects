@@ -1,7 +1,7 @@
 /*
  * @Author: stone
  * @Date: 2020-04-11 23:11:06
- * @LastEditTime: 2020-04-13 22:18:37
+ * @LastEditTime: 2020-05-01 22:02:12
  * @LastEditors: stone
  * @Description: find str to do sth. 
  * @FilePath: /server_frame/src/string_process_center/find_string_todo.c
@@ -9,6 +9,7 @@
  */
 #include "find_string_todo.h"
 
+using namespace std;
 int findStrDel(const char* src, char* subStr, int seqAppears)
 {
     return 0;
@@ -64,9 +65,9 @@ void testStr()
     char buf[BUF_SIZE_128] = { 0 };
     char resBuf[BUF_SIZE_128] = { 0 };
     printf("hello, [%s:%d]\n", __FUNCTION__, __LINE__);
-    FILE* fp = fopen("test_file.txt", "r");
-    (void)fgets(buf, BUF_SIZE_128, fp);
-    (void)fgets(optStr, BUF_SIZE_32, stdin);
+    //FILE* fp = fopen("test_file.txt", "r");
+    cin >> buf;
+    cin >> optStr;
     cnt = delete_sub_str(buf, optStr, resBuf);
     printf("%s %d\n", resBuf, cnt);
     return;
